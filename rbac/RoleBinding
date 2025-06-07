@@ -1,0 +1,13 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: asphones-manager-binding
+  namespace: asphones
+subjects:
+- kind: User
+  name: asphones-user
+  apiGroup: rbac.authorization.k8s.io
+roleRef:  
+    kind: Role
+    name: asphones-manager
+    apiGroup: rbac.authorization.k8s.io
